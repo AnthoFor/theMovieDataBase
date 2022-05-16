@@ -171,8 +171,14 @@ h2 {
 
 .btnInfo {
     cursor: pointer;
+    text-decoration: underline;
+    display: inline;
+    width: -moz-fit-content;
+    width: fit-content;
 }
-
+.btnInfo:hover {
+    color: chocolate;
+}
 #modal {
     display: none; /* Hidden par default */
     position: fixed; 
