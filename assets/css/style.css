@@ -13,6 +13,8 @@ body {
     justify-content: center;
     min-height: 100vh;
     padding-top: 2vh;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
 }
 header {
     width: 100%;
