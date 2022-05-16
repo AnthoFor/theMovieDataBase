@@ -101,6 +101,7 @@ window.addEventListener('load', () => {
                 });
                 copyright.style.color = 'black';
                 body.style.backgroundColor = 'black';
+                titleTMMDB.style.color = 'chocolate';
             }
         })
     
