@@ -20,6 +20,7 @@ window.addEventListener('load', () => {
     .then(json => {
         json.results.forEach((movie, index) => {
             let cuttedOverview = movie.overview
+            // Si le nom ou la description est trop long(ue) alors cut et ajoute (...) +d'infos
             if (movie.title.length > 30 && movie.overview.length > 47) {
                 cuttedOverview = cuttedOverview.substring(0, 46) + `... <span class="btnInfo" id="${movie.id}">+d'infos</span>`;
             } else if (movie.title.length > 16 && movie.overview.length > 75) {
@@ -27,6 +28,7 @@ window.addEventListener('load', () => {
             } else if (movie.overview.length > 101) {
                 cuttedOverview = cuttedOverview.substring(0, 90) + `... <span class="btnInfo" id="${movie.id}">+d'infos</span>`;
             }
+            //si c'est pas trop long utilise la description complète
             let starsNote = '';
             let voteAvrg = movie.vote_average / 2;
             let nbrOfStarsToShow = Math.round(voteAvrg);
@@ -56,8 +58,13 @@ window.addEventListener('load', () => {
                     element.classList.add('movieCardsAnimate');
                 }, j)
                 j+= 250;
-            }); 
-            let btnSelect = document.querySelectorAll('.btnInfo');
+            });
+            // Fin des ajouts de class pour les cards                       
+        });
+        // fin du json for each
+        // selection des TOUTS les "buttons" +d'infos
+        let btnSelect = document.querySelectorAll('.btnInfo');
+        // quand je clique, affiche une modal avec ... titreModal + descrModal
             btnSelect.forEach(element1 => {
                 element1.addEventListener('click', () => {
                     json.results.forEach(element2 => {
@@ -78,8 +85,8 @@ window.addEventListener('load', () => {
                         modal.style.display = 'none';
                     })
                 })
-            });           
-        });
+            });
+            //fin de la fonction des modales quand la description est trop longue
         darkMode.addEventListener('change', ev => {
             let body = document.querySelector('body');
             let borderSelector = document.querySelectorAll('.movieCards');
@@ -103,8 +110,7 @@ window.addEventListener('load', () => {
                 body.style.backgroundColor = 'black';
                 titleTMMDB.style.color = 'chocolate';
             }
-        })
-    
+        })    
     });
 
 
