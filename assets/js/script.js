@@ -11,7 +11,7 @@ window.addEventListener('load', () => {
     loadingDiv.style.display = 'none';
     insideData.style.display = 'flex';
     titleTMMDB.classList.add('movieCardsAnimate');
-    darkSwitch.classList.add('miniScale');
+    containerDM.classList.add('miniScale');
     footerSelect.classList.add('movieCardsAnimate');
     }, 2000);
 }); 
@@ -87,11 +87,12 @@ window.addEventListener('load', () => {
                 })
             });
             //fin de la fonction des modales quand la description est trop longue
-        darkMode.addEventListener('change', ev => {
+            
+            checkbox.addEventListener('change', ev => {
             let body = document.querySelector('body');
             let borderSelector = document.querySelectorAll('.movieCards');
             let txtSelector = document.querySelectorAll('p, h1, h2, span');
-            if (ev.target.checked) {
+            if (ev.target.checked == false) {
                 borderSelector.forEach(element => {
                     element.style.borderColor = 'black';
                 })
