@@ -1,5 +1,5 @@
 #containerDM {
-    position: absolute;
+    position: fixed;
     left: 43%;
     top:42%;
     height: 100%;
@@ -66,12 +66,7 @@
     #containerDM {
         position: absolute;
         left: 43%;
-        top: unset;
-        height: 100%;
-        width: 100%;
-        display: grid;
-        place-items: center;
-        transform: scale(0);
+        top:unset;
     }
     
     .toggle {
