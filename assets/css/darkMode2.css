@@ -1,6 +1,7 @@
 #containerDM {
     position: absolute;
-    left: 45%;
+    left: 43%;
+    top:42%;
     height: 100%;
     width: 100%;
     display: grid;
@@ -13,8 +14,8 @@
 }
 
 .toggle {
-    height: 50px;
-    width: 125px;
+    height: 35px;
+    width: 75px;
     display: grid;
     place-items: center;
     position: relative;
@@ -25,7 +26,7 @@
 }
 
 #graphic {
-    width: 50px;
+    width: 30px;
     position: absolute;
     right: 2%;
     transform-origin: center;
@@ -60,4 +61,26 @@
 #checkbox:checked+.toggle #croissant {
     transform: scale(1.2);
     opacity: 1;
+}
+@media screen and (min-width: 992px) {
+    #containerDM {
+        position: absolute;
+        left: 43%;
+        top: unset;
+        height: 100%;
+        width: 100%;
+        display: grid;
+        place-items: center;
+        transform: scale(0);
+    }
+    
+    .toggle {
+        height: 50px;
+        width: 125px;
+    }
+    
+    #graphic {
+        width: 50px;
+
+    }
 }
