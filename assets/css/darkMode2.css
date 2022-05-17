@@ -1,7 +1,7 @@
 #containerDM {
     position: fixed;
     left: 43%;
-    top:42%;
+    top:40%;
     height: 100%;
     width: 100%;
     display: grid;
@@ -65,8 +65,9 @@
 @media screen and (min-width: 992px) {
     #containerDM {
         position: absolute;
-        left: 43%;
+        left: 90%;
         top:unset;
+        width: auto;
     }
     
     .toggle {
