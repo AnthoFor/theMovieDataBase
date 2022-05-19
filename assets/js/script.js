@@ -88,6 +88,7 @@ window.addEventListener('load', () => {
             });
             //fin de la fonction des modales quand la description est trop longue
             
+            //darkMode
             checkbox.addEventListener('change', ev => {
             let body = document.querySelector('body');
             let borderSelector = document.querySelectorAll('.movieCards');
